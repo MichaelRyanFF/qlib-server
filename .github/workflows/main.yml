@@ -21,3 +21,4 @@ jobs:
       - 
         name: Build the stack
         run: docker-compose -f docker_support/docker-compose.yaml --env-file docker_support/docker-compose.env build
+
