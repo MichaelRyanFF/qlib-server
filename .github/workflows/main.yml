@@ -20,5 +20,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - 
         name: Build the stack
-        run: docker-compose -f docker_support/docker-compose.yaml --env-file docker_support/docker-compose.env build
+        run: |
+          docker-compose -f docker_support/docker-compose.yaml --env-file docker_support/docker-compose.env build
+          docker-compose push
 
